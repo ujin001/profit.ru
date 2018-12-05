@@ -17,9 +17,13 @@
 <body>
 <nav>
   <div class="mobile_menu">
-    <div class="button"></div>
-  </div>
-  <ul class="final_ul"><a video="1" class="top_menu_n top_menu_button top_menu_button_active start">
+        <ul class="burger">
+            <li class="burger_item"></li>
+            <li class="burger_item"></li>
+            <li class="burger_item"></li>
+        </ul>
+    </div>
+  <ul class="center final_ul"><a video="1" class="top_menu_n top_menu_button top_menu_button_active start">
     <li>О компании</li>
   </a><a video="2" class="top_menu_n top_menu_button">
     <li>1</li>
@@ -40,7 +44,7 @@
   </a></ul>
 </nav>
 <section>
-  <article class="final" style="padding-top: 60px !important">
+  <article class="final">
     <div class="center">
       <div class="title"><span class="thin center_title_big">О компании</span></div>
       <div class="video_final">
@@ -50,23 +54,21 @@
                   allowfullscreen=""></iframe>
         </div>
         <div class="video_buttons">
-          <button id="video_prev">ПРЕДЫДУЩЕЕ ВИДЕО</button>
-          <a href="#" target="_blank" style="visibility:hidden">
+          <button class="btn btn-s" id="video_prev">Предыдущее видео</button>
+<!--           <a href="#" target="_blank" style="visibility:hidden">
             <button class="btn-link">ЗАРЕГИСТРИРОВАТЬСЯ В КОМПАНИИ</button>
-          </a>
-          <button id="video_next">СЛЕДУЮЩЕЕ ВИДЕО</button>
+          </a> -->
+          <button class="btn btn-s" id="video_next">Следующее видео</button>
         </div>
       </div>
       <div class="contact_box">
 
+        <ul class="before_info">
+          <li>По всем возникающим вопросам пишите менеджеру:</li>
+          <li>– в WhatsApp на номер <a href="https://wa.me/79994753175" style="color: #1e1112">+7 999 475 3175</a></li>
+          <li>– на электронную почту <a href="mailto:profit-nl@yandex.ru" style="color: #1e1112">profit-nl@yandex.ru</a></li>
+        </ul>
 
-        <span class="before_info">По всем возникающим вопросам пишите менеджеру:</span> - в WhatsApp на номер <a
-        href="https://wa.me/79994753175" style="color: #1e1112">+7 999 475 3175</a><br>
-        или<br>
-        - на электронную почту <a href="mailto:profit-nl@yandex.ru" style="color: #1e1112">profit-nl@yandex.ru</a>
-
-
-        <div class="clearfix"></div>
       </div>
     </div>
   </article>
@@ -130,5 +132,6 @@ $(".top_menu_button").click(function (a) {
 }), $("nav ul a").click(function () {
   $("nav").removeClass("active")
 });</script>
+<script src="js/main.js"></script>
 </body>
 </html>
