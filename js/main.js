@@ -94,8 +94,6 @@ $(window).ready(function(){
 
 		initAnchorMenu();
 		initAnimForm();
-
-		prepareAnchors();
 		prepareVideoPlay();
 
 
@@ -222,19 +220,17 @@ function setupScrollAnimBlock(block){
 		//.addIndicators();
 }
 
-function prepareAnchors(){
-	$('.mouse').click(
-		function(){
-			$('html, body').stop().animate({
-				scrollTop: $(
-					$('section article').eq(
-						$(this).closest('article').index() + 1
-					)
-				).offset().top
-			}, 1000);
-		}
-	);
-}
+$('.mouse').click(
+	function(){
+		$('html, body').stop().animate({
+			scrollTop: $(
+				$('section article').eq(
+					$(this).closest('article').index() + 1
+				)
+			).offset().top
+		}, 1000);
+	}
+);
 
 function initAnimForm(){
 	var forms = $('article.home form, article.form form');

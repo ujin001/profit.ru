@@ -53,6 +53,9 @@ html.mobile .anim_block:after, html.mobile .anim_block:before {
   font: 400 21px Roboto, sans-serif;
   padding: 15px 30px;
 }
+.grecaptcha-badge {
+    z-index: 100 !important;
+}
 .promo {
 	width: 166px;
 	height: 152px;
@@ -132,14 +135,14 @@ margin: 10px 0;
 .politics_text {
     font-size: 15px;
     line-height: 1.5;
-    padding: 0 20px 20px;
+    padding: 0 20px 30px;
     pointer-events: none;
 }
 .politics_title {
     font-size: 21px;
     line-height: 1.4;
     font-weight: 700;
-    padding: 20px 20px 10px;
+    padding: 30px 20px 10px;
 }
 .politics_active .video_close {
     top: -18px !important
@@ -153,6 +156,13 @@ margin: 10px 0;
     background: url(../img/close.png) center no-repeat;
     cursor: pointer;
     z-index: 10001;
+}
+@media only screen and (max-device-width: 630px) {
+	.video > .video_close {
+		top: 10px !important;
+		right: 10px;
+		position: fixed;
+	}
 }
 .flash.error {
 	display: none;
@@ -809,8 +819,8 @@ article.car .video {
     position: relative;
 }
 .video_container {
-    padding-top: 56%;
-    position: relative;
+    /* padding-top: 56%; */
+    /* position: relative; */
 }
 article.car .after_video {
     padding-top: 20px;
@@ -1192,6 +1202,23 @@ button.g-recaptcha {
     article .title .classic {
         font-size: 70px;
     }
+}
+
+@media only screen and (max-device-width: 630px) {
+.popup > .video {
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    transform: none;
+    overflow-y: auto;
+    border-radius: 8px;
+    overflow-x: hidden;
+}
+.politics_active .politics {
+  width: 100% !important;
+  height: auto;
+}
 }
 
 
