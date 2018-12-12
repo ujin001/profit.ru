@@ -372,10 +372,19 @@ function preparePlayer(mode){
 	var active = $('.player_box .video_list .video.active');
 	
 	//setup video player position
-	$('.video_player').css(
-		'margin-left',
-		$('.famous .center').offset().left
-	)
+	if ($('.famous .center').length) {
+        $('.video_player').css(
+            'margin-left',
+            $('.famous .center').offset().left
+        );
+
+        $('.player_box .video_list').css(
+            'left',
+            $('.famous .center').offset().left -
+            (active.index() * v_icon_size) +
+            'px'
+        );
+    }
 	
 	//player list size:
 	$('.player_box .video_list').width(
@@ -411,12 +420,6 @@ function preparePlayer(mode){
 	}
 	
 	//player list position
-	$('.player_box .video_list').css(
-		'left',
-		$('.famous .center').offset().left -
-		(active.index() * v_icon_size) +
-		'px'
-	);
 	
 	$('.video_player .video .player_play')
 		.addClass('anim_finish')
