@@ -273,7 +273,7 @@
 
             <div class="content">
                 <div class="video">
-                    <div class="video_container hidden" style="padding-top: 56%; position: relative;">
+                    <div class="video_container hidden">
                         <iframe width="545" height="307"
                                 src="https://www.youtube.com/embed/oqlW8sa_LKo?rel=0&amp;showinfo=0"
                                 frameborder="0" allowfullscreen></iframe>
@@ -520,9 +520,11 @@
             });
         });
     }; </script>
-<script>if (!device.tablet() && !device.mobile()) {
-    new WOW().init();
-}</script>
-<script src="js/main.js"></script>
+    <script>
+    if (!device.tablet() && !device.mobile()) {
+        new WOW().init();
+    }
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

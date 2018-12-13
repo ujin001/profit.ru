@@ -21,6 +21,7 @@ p {
 .anim_block {
     position: relative;
 }
+html.tablet .anim_block:after, html.tablet .anim_block:before,
 html.mobile .anim_block:after, html.mobile .anim_block:before {
   display: none;
 }
@@ -566,6 +567,7 @@ article.famous .player_box {
     position: relative;
     overflow: hidden
 }
+html.tablet article.famous .player_box,
 html.mobile article.famous .player_box {
     max-width: 1030px;
     padding-left: 15px;
@@ -590,6 +592,7 @@ article.famous .video_list {
     z-index: 100;
     overflow: hidden
 }
+html.tablet article.famous .video_list,
 html.mobile article.famous .video_list {
     height: auto;
     width: auto;
@@ -597,6 +600,7 @@ html.mobile article.famous .video_list {
     position: static;
 }
 @media screen and (max-width: 630px) {
+    html.tablet article.famous .video_list,
     html.mobile article.famous .video_list {
         margin-right: 0;
     }
@@ -659,6 +663,7 @@ article.famous .video_list .video {
     width: 200px;
     float: left
 }
+html.tablet article.famous .video_list .video,
 html.mobile article.famous .video_list .video {
     width: 50%;
     padding-right: 15px;
@@ -666,6 +671,7 @@ html.mobile article.famous .video_list .video {
     box-sizing: border-box;
 }
 @media screen and (max-width: 630px) {
+    html.tablet article.famous .video_list .video,
     html.mobile article.famous .video_list .video {
         width: 100%;
         padding-right: 0;
@@ -674,6 +680,7 @@ html.mobile article.famous .video_list .video {
 article.famous .video_list .video .text {
     margin-top: 10px;
 }
+html.tablet article.famous .video_list .video .text,
 html.mobile article.famous .video_list .video .text {
     font-size: 21px;
     font-weight: 700;
@@ -702,7 +709,9 @@ article.famous .video_list .video .icon img {
     margin: auto;
     object-fit: cover;
 }
-article.famous .video_list .video:hover .icon, html.mobile article.famous .video_list .video .icon {
+article.famous .video_list .video:hover .icon,
+html.tablet article.famous .video_list .video .icon,
+html.mobile article.famous .video_list .video .icon {
     opacity: 1
 }
 article.famous .video_list .video:hover .text {
@@ -818,9 +827,9 @@ article.car .video {
     max-width: 100%;
     position: relative;
 }
-.video_container {
-    /* padding-top: 56%; */
-    /* position: relative; */
+.car .video_container {
+    padding-top: 56%;
+    position: relative;
 }
 article.car .after_video {
     padding-top: 20px;
@@ -1036,13 +1045,13 @@ button.g-recaptcha {
 	opacity: 0 !important;
 }
 
+    html.tablet article.famous .video_player,
     html.mobile article.famous .video_player,
+    html.tablet .player_button,
     html.mobile .player_button,
+    html.tablet .anim_block::after,
     html.mobile .anim_block::after {
         display: none!important
-    }
-    html.mobile article.famous .video_player {
-
     }
 
 
